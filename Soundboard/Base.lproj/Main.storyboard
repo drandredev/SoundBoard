@@ -19,6 +19,17 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f63-VN-BIh">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="VR3-w1-hF8">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VR3-w1-hF8" id="vlc-sL-Gcn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -93,12 +104,22 @@
                                     <action selector="agregarTapped:" destination="HeZ-IE-aJf" eventType="touchUpInside" id="xVC-0d-Fh9"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duracion" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWC-gg-brH">
+                                <rect key="frame" x="159" y="431" width="97" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zqY-in-moQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xHe-AR-f5E" firstAttribute="centerX" secondItem="qiu-V9-5xt" secondAttribute="centerX" id="4Ri-qJ-FI6"/>
                             <constraint firstItem="cpw-VI-o7d" firstAttribute="centerX" secondItem="qiu-V9-5xt" secondAttribute="centerX" id="66D-2h-nPf"/>
+                            <constraint firstItem="NWC-gg-brH" firstAttribute="centerY" secondItem="qiu-V9-5xt" secondAttribute="centerY" id="9Us-mf-uVB"/>
+                            <constraint firstItem="NWC-gg-brH" firstAttribute="centerX" secondItem="qiu-V9-5xt" secondAttribute="centerX" id="9wq-gr-Tww"/>
+                            <constraint firstItem="NWC-gg-brH" firstAttribute="centerX" secondItem="qiu-V9-5xt" secondAttribute="centerX" id="Bst-ax-4dn"/>
                             <constraint firstItem="zhK-sN-kzT" firstAttribute="top" secondItem="zqY-in-moQ" secondAttribute="top" constant="20" id="CS5-H8-uUX"/>
                             <constraint firstItem="Wl5-la-pNl" firstAttribute="centerX" secondItem="qiu-V9-5xt" secondAttribute="centerX" id="CkV-ET-Eqi"/>
                             <constraint firstItem="cpw-VI-o7d" firstAttribute="leading" secondItem="zqY-in-moQ" secondAttribute="leading" constant="170" id="E61-bj-pCh"/>
@@ -110,6 +131,7 @@
                             <constraint firstItem="Wl5-la-pNl" firstAttribute="top" secondItem="zhK-sN-kzT" secondAttribute="bottom" constant="20" id="ZEX-pt-tiS"/>
                             <constraint firstItem="xHe-AR-f5E" firstAttribute="centerX" secondItem="qiu-V9-5xt" secondAttribute="centerX" id="cHT-cl-GKj"/>
                             <constraint firstItem="zhK-sN-kzT" firstAttribute="centerX" secondItem="qiu-V9-5xt" secondAttribute="centerX" id="ecQ-O0-P5e"/>
+                            <constraint firstItem="NWC-gg-brH" firstAttribute="centerY" secondItem="qiu-V9-5xt" secondAttribute="centerY" id="iVq-xw-cdK"/>
                             <constraint firstItem="woD-rB-68W" firstAttribute="leading" secondItem="zqY-in-moQ" secondAttribute="leading" constant="20" id="ijk-gY-DCG"/>
                             <constraint firstItem="xHe-AR-f5E" firstAttribute="leading" secondItem="zqY-in-moQ" secondAttribute="leading" constant="20" id="moY-qH-mAG"/>
                             <constraint firstItem="cpw-VI-o7d" firstAttribute="top" secondItem="woD-rB-68W" secondAttribute="bottom" constant="20" id="p07-jr-Wps"/>
@@ -119,6 +141,7 @@
                     <navigationItem key="navigationItem" id="YgJ-Pu-P3C"/>
                     <connections>
                         <outlet property="agregarButton" destination="cpw-VI-o7d" id="JR9-ml-Fnt"/>
+                        <outlet property="duracionAudio" destination="NWC-gg-brH" id="3BG-DK-aRL"/>
                         <outlet property="grabarButton" destination="zhK-sN-kzT" id="KYo-cz-aN1"/>
                         <outlet property="nombreTextField" destination="woD-rB-68W" id="d3S-ac-CcF"/>
                         <outlet property="reproducirButton" destination="Wl5-la-pNl" id="osH-9L-U92"/>

@@ -25,6 +25,12 @@ class SoundViewController: UIViewController {
     var audioURL:URL?
     
     
+    @IBOutlet weak var duracionAudio: UITextField!
+    
+    var contador = 0
+    var tiempo = Timer()
+    
+    
     
     @IBAction func grabarTapped(_ sender: Any) {
         if grabarAudio!.isRecording {
@@ -34,12 +40,16 @@ class SoundViewController: UIViewController {
             grabarButton.setTitle("GRABAR", for: .normal)
             reproducirButton.isEnabled = true
             agregarButton.isEnabled = true
+            tiempo.invalidate()
         }else{
             //empezar a grabar
             grabarAudio?.record()
+            contador = 0
             //cambiar el texto del boton grabar a detener
             grabarButton.setTitle("DETENER", for: .normal)
             reproducirButton.isEnabled = false
+            tiempo.invalidate()
+            tiempo = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
             
         }
     }
@@ -60,6 +70,7 @@ class SoundViewController: UIViewController {
         let grabacion = Grabacion(context: context)
         grabacion.nombre = nombreTextField.text
         grabacion.audio = NSData(contentsOf: audioURL!)! as Data
+        grabacion.tiempo = duracionAudio.text
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
     }
@@ -104,6 +115,19 @@ class SoundViewController: UIViewController {
             print(error)
         }
     }
+    
+    func timeFormat (_ seconds : Int) -> (String, String, String) {
+           let sec:String = String(format: "%02d",seconds / 3600)
+           let minutes:String = String(format: "%02d",(seconds % 3600) / 60)
+           let hours:String = String(format: "%02d",(seconds % 3600) % 60)
+         return (sec, minutes, hours)
+       }
+    
+    @objc func timerAction() {
+           contador += 1
+           let (h,m,s) = timeFormat(contador)
+           duracionAudio.text = "\(h):\(m):\(s)"
+       }
     
 
     /*
