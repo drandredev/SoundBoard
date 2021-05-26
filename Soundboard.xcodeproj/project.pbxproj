@@ -14,6 +14,7 @@
 		0AAF3605265ED35F001993BD /* Soundboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF3603265ED35F001993BD /* Soundboard.xcdatamodeld */; };
 		0AAF3607265ED360001993BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAF3606265ED360001993BD /* Assets.xcassets */; };
 		0AAF360A265ED360001993BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAF3608265ED360001993BD /* LaunchScreen.storyboard */; };
+		0AAF3612265ED8A1001993BD /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF3611265ED8A1001993BD /* SoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0AAF3606265ED360001993BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AAF3609265ED360001993BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AAF360B265ED360001993BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AAF3611265ED8A1001993BD /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				0AAF3608265ED360001993BD /* LaunchScreen.storyboard */,
 				0AAF360B265ED360001993BD /* Info.plist */,
 				0AAF3603265ED35F001993BD /* Soundboard.xcdatamodeld */,
+				0AAF3611265ED8A1001993BD /* SoundViewController.swift */,
 			);
 			path = Soundboard;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				0AAF35FF265ED35F001993BD /* ViewController.swift in Sources */,
 				0AAF35FB265ED35E001993BD /* AppDelegate.swift in Sources */,
 				0AAF35FD265ED35F001993BD /* SceneDelegate.swift in Sources */,
+				0AAF3612265ED8A1001993BD /* SoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -293,11 +297,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B3LVNS77G5;
 				INFOPLIST_FILE = Soundboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tecsup.Soundboard;
+				PRODUCT_BUNDLE_IDENTIFIER = tecsup.Soundboard1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,11 +317,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B3LVNS77G5;
 				INFOPLIST_FILE = Soundboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tecsup.Soundboard;
+				PRODUCT_BUNDLE_IDENTIFIER = tecsup.Soundboard1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
